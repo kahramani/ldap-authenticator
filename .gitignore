@@ -16,3 +16,4 @@ logs/
 
 # Builder
 */target
+target/
