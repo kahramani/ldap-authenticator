@@ -1,5 +1,7 @@
 package com.kahramani.security.rest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,7 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AuthChecker {
 
-    @RequestMapping("/maintenance/testAuth")
+    private static final Logger logger = LoggerFactory.getLogger(AuthChecker.class);
+
+    @RequestMapping("/ldap-authenticator/checkApp")
+    public String checkApp() {
+        return "App is running!";
+    }
+
+    @RequestMapping("/ldap-authenticator/checkAuth")
     public String checkAuth() {
         return "Successful Authentication!";
     }
