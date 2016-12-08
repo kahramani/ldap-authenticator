@@ -15,5 +15,7 @@ Logback|1.1.7
 * Open project in your editor/ide and follow the `TODO`s to configure ldap server specifications
 * Then run the project and open [http://localhost:8080/ldap-authenticator/checkAuth](http://localhost:8080/ldap-authenticator/checkAuth "localhost") in your browser
 
+Note: If you will use ldap server via ssl, you must import certificates of the ldap server to java's keystore. Otherwise, handshake error will happen. 
+
 ## License
 GNU GPLv3
